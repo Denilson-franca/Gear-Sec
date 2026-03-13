@@ -24,7 +24,7 @@ export function HeroSection() {
       {/* Background image with gears */}
       <div className="absolute inset-0">
         <Image
-          src="/images/gear-bg.png"
+          src="/images/hero-bg.jpg"
           alt="Gear Sec Background"
           fill
           className="object-cover"
