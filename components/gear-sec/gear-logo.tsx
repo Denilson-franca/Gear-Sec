@@ -17,10 +17,8 @@ export function GearLogo({ size = "default" }: { size?: "small" | "default" | "l
 
   return (
     <div className="flex items-center gap-2">
-      <motion.div
+      <div
         className={`${sizeClasses[size]} relative`}
-        animate={{ rotate: 360 }}
-        transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
       >
         <svg viewBox="0 0 100 100" className="w-full h-full drop-shadow-[0_0_10px_rgba(255,26,92,0.6)]">
           <defs>
@@ -68,7 +66,7 @@ export function GearLogo({ size = "default" }: { size?: "small" | "default" | "l
             <circle cx="65" cy="50" r="5" fill="#0a0a0a" stroke="url(#logo-gradient)" strokeWidth="2" />
           </g>
         </svg>
-      </motion.div>
+      </div>
       <div className={`font-[var(--font-orbitron)] ${textClasses[size]} font-bold`}>
         <span className="text-[#ff1a5c] drop-shadow-[0_0_10px_rgba(255,26,92,0.8)]">GEAR</span>
         <br />

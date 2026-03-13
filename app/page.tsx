@@ -10,7 +10,17 @@ import { Footer } from "@/components/gear-sec/footer"
 
 export default function GearSecPage() {
   return (
-    <div className="min-h-screen bg-[#0a0a0a] text-white">
+    <div 
+      className="min-h-screen text-white"
+      style={{
+        backgroundImage: "url('/images/gear-bg-full.jpg')",
+        backgroundSize: "cover",
+        backgroundPosition: "center top",
+        backgroundAttachment: "scroll",
+        backgroundRepeat: "no-repeat",
+        backgroundColor: "#0a0a0a"
+      }}
+    >
       {/* Sidebar Navigation */}
       <Sidebar />
 

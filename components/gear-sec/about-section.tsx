@@ -2,7 +2,7 @@
 
 import { motion, useInView } from "framer-motion"
 import { useRef } from "react"
-import { Gear } from "./gear"
+import { Shield } from "lucide-react"
 
 export function AboutSection() {
   const ref = useRef<HTMLDivElement>(null)
@@ -12,26 +12,21 @@ export function AboutSection() {
     <section
       ref={ref}
       id="sobre"
-      className="relative min-h-screen py-20 px-4 overflow-hidden bg-gradient-to-b from-[#0a0a0a] via-[#100810] to-[#0a0a0a]"
+      className="relative min-h-screen py-20 px-4 overflow-hidden"
     >
-      {/* Animated gear in background */}
-      <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 opacity-10">
-        <Gear size={600} x={50} y={50} speed={60} direction={1} opacity={0.15} />
-      </div>
-
       <div className="max-w-6xl mx-auto relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
-          {/* Left - Animated Gear Illustration */}
+          {/* Left - Shield Icon Illustration */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.8 }}
             className="relative h-[400px] flex items-center justify-center"
           >
-            <div className="relative">
-              <Gear size={250} x={50} y={50} speed={25} direction={1} opacity={0.8} />
-              <Gear size={150} x={85} y={30} speed={20} direction={-1} opacity={0.7} delay={0.2} />
-              <Gear size={100} x={20} y={75} speed={15} direction={-1} opacity={0.6} delay={0.4} />
+            <div className="relative flex items-center justify-center">
+              <div className="w-48 h-48 rounded-full bg-[#ff1a5c]/10 flex items-center justify-center border border-[#ff1a5c]/30">
+                <Shield className="w-24 h-24 text-[#ff1a5c] drop-shadow-[0_0_20px_rgba(255,26,92,0.6)]" />
+              </div>
             </div>
           </motion.div>
 

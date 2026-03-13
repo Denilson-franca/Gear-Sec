@@ -22,7 +22,7 @@ export function ContactSection() {
     <section
       ref={ref}
       id="contato"
-      className="relative min-h-screen py-20 px-4 overflow-hidden bg-gradient-to-b from-[#0a0a0a] via-[#0d080a] to-[#0a0a0a]"
+      className="relative min-h-screen py-20 px-4 overflow-hidden"
     >
       <div className="max-w-6xl mx-auto relative z-10">
         {/* Section Title */}
@@ -63,7 +63,7 @@ export function ContactSection() {
                 { icon: MapPin, label: "Endereço", value: "Av. Paulista, 1000 - São Paulo, SP", href: null },
                 { icon: Phone, label: "Telefone", value: "+55 (11) 99999-9999", href: null },
                 { icon: Mail, label: "E-mail", value: "contato@gearsec.com.br", href: null },
-                { icon: Linkedin, label: "LinkedIn", value: "Denilson França", href: "https://www.linkedin.com/in/denilson-frança-7a959b191/" },
+                { icon: Linkedin, label: "LinkedIn", value: "Denilson França", href: "https://www.linkedin.com/in/denilson-fran%C3%A7a-7a959b191/" },
               ].map((item, index) => {
                 const content = (
                   <>

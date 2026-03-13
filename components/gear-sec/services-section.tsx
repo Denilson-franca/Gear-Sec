@@ -3,7 +3,6 @@
 import { motion, useInView } from "framer-motion"
 import { useRef } from "react"
 import { Shield, Eye, Search, Users } from "lucide-react"
-import { Gear } from "./gear"
 
 const services = [
   {
@@ -42,12 +41,6 @@ export function ServicesSection() {
       id="servicos"
       className="relative min-h-screen py-20 px-4 overflow-hidden"
     >
-      {/* Background gears */}
-      <div className="absolute inset-0 opacity-20">
-        <Gear size={300} x={-10} y={30} speed={40} direction={1} opacity={0.2} />
-        <Gear size={250} x={110} y={70} speed={35} direction={-1} opacity={0.15} />
-      </div>
-
       <div className="max-w-6xl mx-auto relative z-10">
         {/* Section Title */}
         <motion.div
