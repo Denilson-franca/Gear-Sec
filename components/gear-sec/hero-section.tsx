@@ -25,19 +25,9 @@ export function HeroSection() {
       {/* Background gradient */}
       <div className="absolute inset-0 bg-gradient-to-b from-[#0a0a0a] via-[#150a10] to-[#0a0a0a]" />
       
-      {/* Animated gears background - Left side */}
-      <Gear size={200} x={-5} y={20} speed={30} direction={1} opacity={0.4} delay={0} />
-      <Gear size={150} x={5} y={50} speed={25} direction={-1} opacity={0.5} delay={0.5} />
-      <Gear size={180} x={-3} y={80} speed={35} direction={1} opacity={0.35} delay={1} />
-      <Gear size={100} x={15} y={15} speed={20} direction={-1} opacity={0.3} delay={0.2} />
-      <Gear size={120} x={10} y={70} speed={28} direction={1} opacity={0.4} delay={0.8} />
-      
-      {/* Animated gears background - Right side */}
-      <Gear size={180} x={95} y={25} speed={28} direction={-1} opacity={0.4} delay={0.3} />
-      <Gear size={140} x={88} y={55} speed={22} direction={1} opacity={0.5} delay={0.7} />
-      <Gear size={160} x={100} y={85} speed={32} direction={-1} opacity={0.35} delay={0.1} />
-      <Gear size={90} x={80} y={10} speed={18} direction={1} opacity={0.3} delay={0.4} />
-      <Gear size={110} x={85} y={75} speed={26} direction={-1} opacity={0.4} delay={0.6} />
+      {/* Two main interlocking red gears */}
+      <Gear size={350} x={15} y={50} speed={25} direction={1} opacity={0.9} delay={0} />
+      <Gear size={280} x={85} y={50} speed={20} direction={-1} opacity={0.9} delay={0} />
 
       {/* Sparks */}
       <Sparks />

@@ -2,7 +2,7 @@
 
 import { motion, useInView } from "framer-motion"
 import { useRef, useState } from "react"
-import { Send, MapPin, Phone, Mail } from "lucide-react"
+import { Send, MapPin, Phone, Mail, Linkedin } from "lucide-react"
 
 export function ContactSection() {
   const ref = useRef<HTMLDivElement>(null)
@@ -60,26 +60,48 @@ export function ContactSection() {
 
             <div className="space-y-4">
               {[
-                { icon: MapPin, label: "Endereço", value: "Av. Paulista, 1000 - São Paulo, SP" },
-                { icon: Phone, label: "Telefone", value: "+55 (11) 99999-9999" },
-                { icon: Mail, label: "E-mail", value: "contato@gearsec.com.br" },
-              ].map((item, index) => (
-                <motion.div
-                  key={item.label}
-                  initial={{ opacity: 0, x: -20 }}
-                  animate={isInView ? { opacity: 1, x: 0 } : {}}
-                  transition={{ duration: 0.5, delay: 0.4 + index * 0.1 }}
-                  className="flex items-center gap-4 p-4 rounded-lg bg-[#1a1a1a]/50 border border-[#2a2a2a] hover:border-[#ff1a5c]/30 transition-colors duration-300"
-                >
-                  <div className="w-10 h-10 rounded-lg bg-[#ff1a5c]/10 flex items-center justify-center">
-                    <item.icon className="w-5 h-5 text-[#ff1a5c]" />
-                  </div>
-                  <div>
-                    <div className="text-xs text-gray-500 uppercase tracking-wider">{item.label}</div>
-                    <div className="text-white">{item.value}</div>
-                  </div>
-                </motion.div>
-              ))}
+                { icon: MapPin, label: "Endereço", value: "Av. Paulista, 1000 - São Paulo, SP", href: null },
+                { icon: Phone, label: "Telefone", value: "+55 (11) 99999-9999", href: null },
+                { icon: Mail, label: "E-mail", value: "contato@gearsec.com.br", href: null },
+                { icon: Linkedin, label: "LinkedIn", value: "Denilson França", href: "https://www.linkedin.com/in/denilson-frança-7a959b191/" },
+              ].map((item, index) => {
+                const content = (
+                  <>
+                    <div className="w-10 h-10 rounded-lg bg-[#ff1a5c]/10 flex items-center justify-center">
+                      <item.icon className="w-5 h-5 text-[#ff1a5c]" />
+                    </div>
+                    <div>
+                      <div className="text-xs text-gray-500 uppercase tracking-wider">{item.label}</div>
+                      <div className="text-white">{item.value}</div>
+                    </div>
+                  </>
+                )
+                
+                return item.href ? (
+                  <motion.a
+                    key={item.label}
+                    href={item.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    initial={{ opacity: 0, x: -20 }}
+                    animate={isInView ? { opacity: 1, x: 0 } : {}}
+                    transition={{ duration: 0.5, delay: 0.4 + index * 0.1 }}
+                    className="flex items-center gap-4 p-4 rounded-lg bg-[#1a1a1a]/50 border border-[#2a2a2a] hover:border-[#ff1a5c]/30 hover:bg-[#1a1a1a]/80 transition-colors duration-300 cursor-pointer"
+                  >
+                    {content}
+                  </motion.a>
+                ) : (
+                  <motion.div
+                    key={item.label}
+                    initial={{ opacity: 0, x: -20 }}
+                    animate={isInView ? { opacity: 1, x: 0 } : {}}
+                    transition={{ duration: 0.5, delay: 0.4 + index * 0.1 }}
+                    className="flex items-center gap-4 p-4 rounded-lg bg-[#1a1a1a]/50 border border-[#2a2a2a] hover:border-[#ff1a5c]/30 transition-colors duration-300"
+                  >
+                    {content}
+                  </motion.div>
+                )
+              })}
             </div>
           </motion.div>
 
