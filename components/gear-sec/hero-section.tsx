@@ -2,8 +2,7 @@
 
 import { motion, useScroll, useTransform } from "framer-motion"
 import { useRef } from "react"
-import { Gear } from "./gear"
-import { Sparks } from "./sparks"
+import Image from "next/image"
 
 export function HeroSection() {
   const ref = useRef<HTMLDivElement>(null)
@@ -22,15 +21,17 @@ export function HeroSection() {
       id="inicio"
       className="relative min-h-screen flex items-center justify-center overflow-hidden"
     >
-      {/* Background gradient */}
-      <div className="absolute inset-0 bg-gradient-to-b from-[#0a0a0a] via-[#150a10] to-[#0a0a0a]" />
-      
-      {/* Two main interlocking red gears */}
-      <Gear size={350} x={15} y={50} speed={25} direction={1} opacity={0.9} delay={0} />
-      <Gear size={280} x={85} y={50} speed={20} direction={-1} opacity={0.9} delay={0} />
-
-      {/* Sparks */}
-      <Sparks />
+      {/* Background image with gears */}
+      <div className="absolute inset-0">
+        <Image
+          src="/images/gear-bg.png"
+          alt="Gear Sec Background"
+          fill
+          className="object-cover"
+          priority
+        />
+        <div className="absolute inset-0 bg-black/30" />
+      </div>
 
       {/* Content */}
       <motion.div
