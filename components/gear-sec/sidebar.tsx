@@ -83,7 +83,7 @@ export function Sidebar() {
 
         {/* Footer */}
         <div className="text-xs text-gray-600 text-center">
-          © 2024 Gear Sec
+          © 2026 Gear Sec
         </div>
       </motion.aside>
 
