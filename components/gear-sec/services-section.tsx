@@ -3,6 +3,7 @@
 import { motion, useInView } from "framer-motion"
 import { useRef } from "react"
 import { Shield, Eye, Search, Users } from "lucide-react"
+import Link from "next/link"
 
 const services = [
   {
@@ -10,24 +11,28 @@ const services = [
     title: "Firewall Avançado",
     description: "Proteção de rede de última geração com análise de tráfego em tempo real e bloqueio automático de ameaças.",
     icon: Shield,
+    href: "/servicos/firewall",
   },
   {
     number: "2",
     title: "Monitoramento 24/7",
     description: "Vigilância contínua dos seus sistemas com alertas instantâneos e resposta rápida a incidentes.",
     icon: Eye,
+    href: "/servicos/monitoramento",
   },
   {
     number: "3",
     title: "Auditoria Inteligente",
     description: "Análise profunda de vulnerabilidades e conformidade com relatórios detalhados e recomendações.",
     icon: Search,
+    href: "/servicos/auditoria",
   },
   {
     number: "4",
     title: "Consultoria Especializada",
     description: "Equipe de especialistas dedicados para desenvolver estratégias de segurança personalizadas.",
     icon: Users,
+    href: "/servicos/consultoria",
   },
 ]
 
@@ -89,13 +94,15 @@ export function ServicesSection() {
                 </p>
 
                 {/* Button */}
-                <motion.button
-                  whileHover={{ scale: 1.02 }}
-                  whileTap={{ scale: 0.98 }}
-                  className="px-6 py-2.5 bg-transparent border border-[#ff1a5c] text-[#ff1a5c] rounded-lg font-medium text-sm hover:bg-[#ff1a5c] hover:text-white transition-all duration-300 hover:shadow-[0_0_20px_rgba(255,26,92,0.4)]"
-                >
-                  Saiba Mais
-                </motion.button>
+                <Link href={service.href}>
+                  <motion.button
+                    whileHover={{ scale: 1.02 }}
+                    whileTap={{ scale: 0.98 }}
+                    className="px-6 py-2.5 bg-transparent border border-[#ff1a5c] text-[#ff1a5c] rounded-lg font-medium text-sm hover:bg-[#ff1a5c] hover:text-white transition-all duration-300 hover:shadow-[0_0_20px_rgba(255,26,92,0.4)]"
+                  >
+                    Saiba Mais
+                  </motion.button>
+                </Link>
 
                 {/* Corner decoration */}
                 <div className="absolute bottom-0 right-0 w-20 h-20 overflow-hidden">
