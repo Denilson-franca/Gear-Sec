@@ -24,7 +24,7 @@ export function Footer() {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="text-gray-500 text-sm text-center"
           >
-            © 2024 Gear Sec. Todos os direitos reservados.
+            © 2026 Gear Sec. Todos os direitos reservados.
           </motion.p>
 
           {/* Social Links */}

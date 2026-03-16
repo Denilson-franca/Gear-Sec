@@ -12,10 +12,37 @@ export function ContactSection() {
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
     setIsSubmitting(true)
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 1500))
-    setIsSubmitting(false)
-    alert("Mensagem enviada com sucesso!")
+    
+    const formData = new FormData(e.currentTarget)
+    const data = {
+      name: formData.get("name") as string,
+      email: formData.get("email") as string,
+      company: formData.get("company") as string,
+      message: formData.get("message") as string,
+    }
+
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      })
+
+      const result = await response.json()
+
+      if (response.ok) {
+        alert("Mensagem enviada com sucesso! Entraremos em contato em breve.")
+        e.currentTarget.reset()
+      } else {
+        alert(result.error || "Erro ao enviar mensagem. Tente novamente.")
+      }
+    } catch {
+      alert("Erro ao enviar mensagem. Verifique sua conexão e tente novamente.")
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   return (
@@ -116,6 +143,7 @@ export function ContactSection() {
                   <input
                     type="text"
                     id="name"
+                    name="name"
                     required
                     className="w-full px-4 py-3 rounded-lg bg-[#1a1a1a] border border-[#2a2a2a] text-white placeholder-gray-500 focus:border-[#ff1a5c] focus:ring-1 focus:ring-[#ff1a5c] focus:outline-none transition-colors duration-300"
                     placeholder="Seu nome"
@@ -126,6 +154,7 @@ export function ContactSection() {
                   <input
                     type="email"
                     id="email"
+                    name="email"
                     required
                     className="w-full px-4 py-3 rounded-lg bg-[#1a1a1a] border border-[#2a2a2a] text-white placeholder-gray-500 focus:border-[#ff1a5c] focus:ring-1 focus:ring-[#ff1a5c] focus:outline-none transition-colors duration-300"
                     placeholder="seu@email.com"
@@ -138,6 +167,7 @@ export function ContactSection() {
                 <input
                   type="text"
                   id="company"
+                  name="company"
                   className="w-full px-4 py-3 rounded-lg bg-[#1a1a1a] border border-[#2a2a2a] text-white placeholder-gray-500 focus:border-[#ff1a5c] focus:ring-1 focus:ring-[#ff1a5c] focus:outline-none transition-colors duration-300"
                   placeholder="Nome da sua empresa"
                 />
@@ -147,6 +177,7 @@ export function ContactSection() {
                 <label htmlFor="message" className="block text-sm text-gray-400 mb-2">Mensagem</label>
                 <textarea
                   id="message"
+                  name="message"
                   rows={5}
                   required
                   className="w-full px-4 py-3 rounded-lg bg-[#1a1a1a] border border-[#2a2a2a] text-white placeholder-gray-500 focus:border-[#ff1a5c] focus:ring-1 focus:ring-[#ff1a5c] focus:outline-none transition-colors duration-300 resize-none"
