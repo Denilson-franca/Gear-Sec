@@ -37,6 +37,9 @@ Mensagem:
 ${message}
     `.trim()
 
+    // Destinatário do e-mail - usa variável de ambiente ou valor padrão
+    const contactEmail = process.env.CONTACT_EMAIL || "gearsec@gearsec.com.br"
+
     // If RESEND_API_KEY is available, use Resend
     if (process.env.RESEND_API_KEY) {
       const resendResponse = await fetch("https://api.resend.com/emails", {
@@ -47,7 +50,7 @@ ${message}
         },
         body: JSON.stringify({
           from: "Gear Sec <noreply@resend.dev>",
-          to: ["gearsec@gearsec.com.br"],
+          to: [contactEmail],
           reply_to: email,
           subject: `Novo Contato - ${name}`,
           text: emailContent,
