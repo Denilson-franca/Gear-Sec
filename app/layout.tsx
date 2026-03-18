@@ -14,24 +14,16 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: 'Gear Sec – Segurança Cibernética',
-  description: 'Gear Up Your Defenses - Soluções avançadas em segurança cibernética',
-  icons: {
-    icon: [
-      {
-        url: '/icon-light-32x32.png',
-        media: '(prefers-color-scheme: light)',
-      },
-      {
-        url: '/icon-dark-32x32.png',
-        media: '(prefers-color-scheme: dark)',
-      },
-      {
-        url: '/icon.svg',
-        type: 'image/svg+xml',
-      },
-    ],
-    apple: '/apple-icon.png',
+  title: "Gear Sec - Segurança | Proteção Cibernética para Empresas • Denilson França",
+  description: "Segurança cibernética profissional. Entre em contato e proteja sua empresa agora.",
+  icons: { 
+    icon: "/favicon.ico",
+    apple: "/apple-icon.png",
+  },
+  openGraph: {
+    title: "Gear Sec - Segurança | Proteção Cibernética",
+    description: "Segurança cibernética profissional. Entre em contato e proteja sua empresa agora.",
+    type: "website",
   },
 }
 
