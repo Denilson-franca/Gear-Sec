@@ -10,12 +10,12 @@ import { Footer } from "@/components/gear-sec/footer"
 
 export default function GearSecPage() {
   return (
-    <div className="min-h-screen bg-[#0a0a0a] text-white">
+    <div className="relative min-h-screen bg-[#0a0a0a] text-white">
       {/* Sidebar Navigation */}
       <Sidebar />
 
       {/* Main Content */}
-      <main className="lg:ml-56">
+      <main className="relative lg:ml-56">
         <HeroSection />
         <ServicesSection />
         <AboutSection />
