@@ -16,7 +16,6 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: 'Gear Sec – Segurança Cibernética',
   description: 'Gear Up Your Defenses - Soluções avançadas em segurança cibernética',
-  generator: 'v0.app',
   icons: {
     icon: [
       {
