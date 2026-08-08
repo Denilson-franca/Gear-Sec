@@ -49,7 +49,7 @@ ${message}
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          from: "Gear Sec <noreply@resend.dev>",
+          from: "Gear Sec <contato@ghostfiap.com.br>",
           to: [contactEmail],
           reply_to: email,
           subject: `Novo Contato - ${name}`,
