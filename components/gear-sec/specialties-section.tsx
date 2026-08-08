@@ -6,7 +6,7 @@ import { HeartHandshake, Rocket, Network, MailWarning } from "lucide-react"
 
 const specialties = [
   {
-    title: "Impacto Social e Mentoria",
+    title: "Impacto Social e Mentoria Filantrópica",
     description:
       "Valorizamos profundamente ONGs e empresas que dão importância a inserir crianças e jovens no mundo da tecnologia. Prestamos serviços e conduzimos mentorias para essas causas, e ficamos verdadeiramente felizes em poder ajudar a transformar vidas por meio do conhecimento.",
     icon: HeartHandshake,
@@ -53,7 +53,7 @@ export function SpecialtiesSection() {
             Nossa Atuação e Especialidades
           </h2>
           <p className="text-gray-400 max-w-2xl mx-auto">
-            Da mentoria social à infraestrutura crítica, atuamos ponta a ponta na proteção e evolução digital da sua organização
+            Acreditamos que tecnologia transforma vidas. Por isso a filantropia está no centro da nossa atuação: apoiamos ONGs e projetos que inserem crianças e jovens no mundo da tecnologia, e levamos essa mesma dedicação à infraestrutura crítica e à proteção digital da sua organização
           </p>
         </motion.div>
 
