@@ -37,7 +37,7 @@ const team = [
   },
   {
     name: "Confidencial",
-    role: "Offensive Security Analyst | CRTO | eWPTX | CWHI",
+    role: "Especialista em Segurança Ofensiva",
     linkedin: null,
     confidential: true,
     image: "/images/team/confidencial.png",
