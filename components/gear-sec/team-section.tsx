@@ -2,42 +2,47 @@
 
 import { motion, useInView } from "framer-motion"
 import { useRef } from "react"
-import { Linkedin, ShieldQuestion } from "lucide-react"
+import { Linkedin } from "lucide-react"
 
 const team = [
   {
     name: "Denilson França",
     role: "Fundador e Analista de Segurança da Informação",
     linkedin: "https://www.linkedin.com/in/denilson-fran%C3%A7a-7a959b191/",
+    image: "/images/team/denilson-franca.png",
   },
   {
     name: "Ulysses Gonçalez Moniz",
     role: "Especialista em Segurança da Informação e Redes",
     linkedin: "https://www.linkedin.com/in/ulysses-gon%C3%A7alez-moniz-0984141b/",
+    image: "/images/team/ulysses-moniz.png",
   },
   {
     name: "Matheus Reis",
     role: "Cientista de Dados",
     linkedin: "https://www.linkedin.com/in/reismatheus9678/",
+    image: "/images/team/matheus-reis.png",
   },
   {
     name: "João Pedro Guimarães Pin",
     role: "Analista de Dados",
     linkedin: "https://www.linkedin.com/in/joaopedropin/",
+    image: "/images/team/joao-pedro-pin.png",
+  },
+  {
+    name: "Lucas Stern",
+    role: "Especialista em RPA",
+    linkedin: "https://www.linkedin.com/in/lucasguistern",
+    image: "/images/team/lucas-stern.png",
   },
   {
     name: "Confidencial",
     role: "Offensive Security Analyst | CRTO | eWPTX | CWHI",
     linkedin: null,
     confidential: true,
+    image: "/images/team/confidencial.png",
   },
 ]
-
-function getInitials(name: string) {
-  const parts = name.trim().split(" ").filter(Boolean)
-  if (parts.length === 1) return parts[0].slice(0, 2).toUpperCase()
-  return (parts[0][0] + parts[parts.length - 1][0]).toUpperCase()
-}
 
 export function TeamSection() {
   const ref = useRef<HTMLDivElement>(null)
@@ -77,14 +82,12 @@ export function TeamSection() {
             >
               <div className="relative bg-[#121212]/80 backdrop-blur-sm border border-[#ff1a5c]/20 rounded-xl p-6 h-full flex flex-col items-center text-center overflow-hidden transition-all duration-500 hover:border-[#ff1a5c]/60 hover:shadow-[0_0_30px_rgba(255,26,92,0.2)]">
                 {/* Avatar */}
-                <div className="w-20 h-20 rounded-full bg-[#ff1a5c]/10 flex items-center justify-center border border-[#ff1a5c]/30 mb-4 group-hover:bg-[#ff1a5c]/20 group-hover:border-[#ff1a5c]/50 transition-all duration-300">
-                  {member.confidential ? (
-                    <ShieldQuestion className="w-9 h-9 text-[#ff1a5c]" />
-                  ) : (
-                    <span className="font-[var(--font-orbitron)] text-xl font-bold text-[#ff1a5c]">
-                      {getInitials(member.name)}
-                    </span>
-                  )}
+                <div className="w-24 h-24 rounded-full overflow-hidden border-2 border-[#ff1a5c]/30 mb-4 group-hover:border-[#ff1a5c]/60 transition-all duration-300 shadow-[0_0_20px_rgba(255,26,92,0.15)] group-hover:shadow-[0_0_25px_rgba(255,26,92,0.35)]">
+                  <img
+                    src={member.image || "/placeholder.svg"}
+                    alt={member.confidential ? "Perfil confidencial" : `Foto de ${member.name}`}
+                    className="w-full h-full object-cover"
+                  />
                 </div>
 
                 {/* Name & Role */}

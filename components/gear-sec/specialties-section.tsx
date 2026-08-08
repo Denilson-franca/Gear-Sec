@@ -8,13 +8,13 @@ const specialties = [
   {
     title: "Impacto Social e Mentoria",
     description:
-      "Atuação filantrópica prestando serviços para ONGs focadas em inserir adolescentes na tecnologia, além de conduzir mentorias especializadas para empresas privadas.",
+      "Valorizamos profundamente ONGs e empresas que dão importância a inserir crianças e jovens no mundo da tecnologia. Prestamos serviços e conduzimos mentorias para essas causas, e ficamos verdadeiramente felizes em poder ajudar a transformar vidas por meio do conhecimento.",
     icon: HeartHandshake,
   },
   {
     title: "Implantação de Ponta a Ponta",
     description:
-      "Arquitetura, design e desenvolvimento do zero de plataformas de alto desempenho, utilizando Vercel para hospedagem e arquitetura serverless.",
+      "Arquitetura, design e desenvolvimento do zero de plataformas de alto desempenho, com foco em performance, escalabilidade e segurança.",
     icon: Rocket,
   },
   {

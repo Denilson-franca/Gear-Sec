@@ -38,7 +38,7 @@ ${message}
     `.trim()
 
     // Destinatário do e-mail - usa variável de ambiente ou valor padrão
-    const contactEmail = process.env.CONTACT_EMAIL || "gearsec@gearsec.com.br"
+    const contactEmail = process.env.CONTACT_EMAIL || "gearsec.com.br@proton.me"
 
     // If RESEND_API_KEY is available, use Resend
     if (process.env.RESEND_API_KEY) {
