@@ -1,14 +1,16 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { Home, Briefcase, Users, Mail, Headphones, Menu, X } from "lucide-react"
+import { Home, Target, Briefcase, Info, UsersRound, Mail, Headphones, Menu, X } from "lucide-react"
 import { useState, useEffect } from "react"
 import { GearLogo } from "./gear-logo"
 
 const menuItems = [
   { icon: Home, label: "Início", href: "#inicio" },
+  { icon: Target, label: "Especialidades", href: "#especialidades" },
   { icon: Briefcase, label: "Serviços", href: "#servicos" },
-  { icon: Users, label: "Sobre Nós", href: "#sobre" },
+  { icon: Info, label: "Sobre Nós", href: "#sobre" },
+  { icon: UsersRound, label: "Equipe", href: "#equipe" },
   { icon: Mail, label: "Contato", href: "#contato" },
   { icon: Headphones, label: "Suporte", href: "#suporte" },
 ]

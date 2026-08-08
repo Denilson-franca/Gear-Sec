@@ -88,7 +88,7 @@ export function ContactSection() {
             <div className="space-y-4">
               {[
                 { icon: Mail, label: "E-mail", value: "gearsec@gearsec.com.br", href: "mailto:gearsec@gearsec.com.br" },
-                { icon: Linkedin, label: "Desenvolvedor", value: "Denilson Franca - Fundador & Operador da Gear Sec", href: "https://www.linkedin.com/in/denilson-fran%C3%A7a-7a959b191/" },
+                { icon: Linkedin, label: "Fundador", value: "Denilson França - Fundador e Analista de Segurança da Informação", href: "https://www.linkedin.com/in/denilson-fran%C3%A7a-7a959b191/" },
               ].map((item, index) => {
                 const content = (
                   <>

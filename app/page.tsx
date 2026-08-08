@@ -2,8 +2,10 @@
 
 import { Sidebar } from "@/components/gear-sec/sidebar"
 import { HeroSection } from "@/components/gear-sec/hero-section"
+import { SpecialtiesSection } from "@/components/gear-sec/specialties-section"
 import { ServicesSection } from "@/components/gear-sec/services-section"
 import { AboutSection } from "@/components/gear-sec/about-section"
+import { TeamSection } from "@/components/gear-sec/team-section"
 import { WhyChooseSection } from "@/components/gear-sec/why-choose-section"
 import { ContactSection } from "@/components/gear-sec/contact-section"
 import { Footer } from "@/components/gear-sec/footer"
@@ -21,8 +23,10 @@ export default function GearSecPage() {
       {/* Main Content */}
       <main className="relative lg:ml-56">
         <HeroSection />
+        <SpecialtiesSection />
         <ServicesSection />
         <AboutSection />
+        <TeamSection />
         <WhyChooseSection />
         <ContactSection />
         <Footer />
