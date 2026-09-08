@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { Orbitron, Inter } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
 import './globals.css'
+import { LanguageProvider } from '@/components/gear-sec/language-provider'
 
 const orbitron = Orbitron({ 
   subsets: ["latin"],
@@ -35,7 +36,7 @@ export default function RootLayout({
   return (
     <html lang="pt-BR" className="dark">
       <body className={`${orbitron.variable} ${inter.variable} font-sans antialiased bg-[#0a0a0a] text-white`}>
-        {children}
+        <LanguageProvider>{children}</LanguageProvider>
         <Analytics />
       </body>
     </html>
