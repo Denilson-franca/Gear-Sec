@@ -10,10 +10,15 @@ import { WhyChooseSection } from "@/components/gear-sec/why-choose-section"
 import { ContactSection } from "@/components/gear-sec/contact-section"
 import { Footer } from "@/components/gear-sec/footer"
 import { FloatingLogo } from "@/components/gear-sec/floating-logo"
+import { LanguageSwitcher } from "@/components/gear-sec/language-switcher"
+import { LanguageSync } from "@/components/gear-sec/language-sync"
 
 export default function GearSecPage() {
   return (
     <div className="relative min-h-screen bg-[#0a0a0a] text-white">
+      <LanguageSwitcher />
+      <LanguageSync />
+
       {/* Floating Logo */}
       <FloatingLogo />
       
