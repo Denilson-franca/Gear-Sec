@@ -1,5 +1,4 @@
-# 🛡️ GearSec - Security & Automation
-
+# 🛡️ GearSec 
 ##  Nosso Propósito
 
 A GearSec atua em três frentes principais:
@@ -21,7 +20,7 @@ Este repositório hospeda o código-fonte das ferramentas de automação e segur
 
 ------------------------------------------------------------------------------------------------------------------
 
-# 🛡️ GearSec - Security & Automation
+# 🛡️ GearSec 
 
 ##  Our Purpose
 
