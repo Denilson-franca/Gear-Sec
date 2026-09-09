@@ -1,35 +1,47 @@
-# Gear-Sec
+# 🛡️ GearSec - Security & Automation
 
-This is a [Next.js](https://nextjs.org) project bootstrapped with [v0](https://v0.app).
+Bem-vindo ao repositório oficial da **GearSec**, uma iniciativa dedicada à pesquisa, desenvolvimento de ferramentas open-source e consultoria em Segurança da Informação.
 
-## Built with v0
+##  Nosso Propósito
 
-This repository is linked to a [v0](https://v0.app) project. You can continue developing by visiting the link below -- start new chats to make changes, and v0 will push commits directly to this repo. Every merge to `main` will automatically deploy.
+A GearSec atua em três frentes principais:
 
-[Continue working on v0 →](https://v0.app/chat/projects/prj_IoYyM650jo9qa02gIeVOrtNGj083)
+*   **Segurança Ofensiva e Defensiva (Purple Team):** Realização de testes de invasão e análise de vulnerabilidades focados em fortalecer a resiliência de infraestruturas críticas. Utilizamos a visão ofensiva para aprimorar regras de detecção e defesas corporativas.
+*   **Mentoria Corporativa:** Condução de mentorias estratégicas e consultoria em segurança da informação voltada para empresas privadas.
+*   **Impacto Social e Filantropia:** Atuação filantrópica junto a ONGs, apoiando projetos que inserem crianças e adolescentes no ambiente educacional e no mundo da tecnologia.
 
-## Getting Started
+## 💻 Desenvolvimento & Open-Source
 
-First, run the development server:
+Este repositório hospeda o código-fonte das ferramentas de automação e segurança que desenvolvemos. 
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+**Tecnologias Principais:**
+*   TypeScript
+*   Next.js / React
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
+*Construindo defesas mais fortes através da união entre inteligência de ameaças, automação e impacto social.*
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+------------------------------------------------------------------------------------------------------------------
 
-## Learn More
+# 🛡️ GearSec - Security & Automation
 
-To learn more, take a look at the following resources:
+Welcome to the official repository of **GearSec**, an initiative dedicated to research, development of open-source tools and consulting in Information Security.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-- [v0 Documentation](https://v0.app/docs) - learn about v0 and how to use it.
+##  Our Purpose
 
-<a href="https://v0.app/chat/api/kiro/clone/Xx1Ghost1xX/Gear-Sec" alt="Open in Kiro"><img src="https://pdgvvgmkdvyeydso.public.blob.vercel-storage.com/open%20in%20kiro.svg?sanitize=true" /></a>
+GearSec operates on three main fronts:
+
+* **Offensive and Defensive Security (Purple Team):** Conducting invasion testing and vulnerability analysis focused on strengthening the resilience of critical infrastructure. We use offensive vision to improve detection rules and corporate defenses.
+* **Corporate Mentoring:** Conducting strategic mentoring and information security consulting aimed at private companies.
+* **Social Impact and Philanthropy:** Philanthropic work with NGOs, supporting projects that insert children and adolescents into the educational environment and the world of technology.
+
+## 💻 Development & Open-Source
+
+This repository hosts the source code for the automation and security tools we have developed. 
+
+**Main Technologies:**
+* TypeScript
+* Next.js / React
+
+---
+*Building stronger defenses through the union of threat intelligence, automation, and social impact.*
