@@ -1,7 +1,5 @@
 # 🛡️ GearSec - Security & Automation
 
-Bem-vindo ao repositório oficial da **GearSec**, uma iniciativa dedicada à pesquisa, desenvolvimento de ferramentas open-source e consultoria em Segurança da Informação.
-
 ##  Nosso Propósito
 
 A GearSec atua em três frentes principais:
@@ -24,8 +22,6 @@ Este repositório hospeda o código-fonte das ferramentas de automação e segur
 ------------------------------------------------------------------------------------------------------------------
 
 # 🛡️ GearSec - Security & Automation
-
-Welcome to the official repository of **GearSec**, an initiative dedicated to research, development of open-source tools and consulting in Information Security.
 
 ##  Our Purpose
 
